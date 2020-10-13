@@ -1,0 +1,222 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <img src="../../assets/logo.png" class="logo" />
+    <ion-icon name="search-outline" class="header-search"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="out-cat">
+    <div class="category">
+      <a>
+        <img src="../../assets/icons/all-category.png"/>
+        <span>All Categories</span>
+      </a>
+      <a>
+        <img src="../../assets/icons/clothes.png"/>
+        <span>Fashion</span>
+      </a>
+      <a>
+        <img src="../../assets/icons/mobile.png"/>
+        <span>Mobile</span>
+      </a>
+      <a>
+        <img src="../../assets/icons/electronics.png"/>
+        <span>Electronics</span>
+      </a>
+    </div>
+  </div>
+  <ion-slides [options]="slideOptions" pager="true" #slider autoplay="5000" (ionSlidesDidLoad)="slidesDidLoad(slider)">
+    <ion-slide>
+      <div class="slide">
+        <img src="../../../assets/slider/slide1.png" alt="slide" />
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../../assets/slider/slide2.png" alt="slide" />
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../../assets/slider/slide3.png" alt="slide" />
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <ion-grid>
+    <ion-row>
+      <h1 class="title">New Arrival</h1>
+    </ion-row>
+  </ion-grid>
+  <ion-slides class="product-slider" [options]="productOptions" #slider>
+    <ion-slide>
+      <div class="slide">
+        <div class="silde-image">
+          <img src="../../../assets/product/t-shirt.png" alt="slide" />
+          <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
+        </div>
+        <div class="product-content">
+          <span class="product-provider">Mango</span>
+          <h3>T-Shirt SPANISH</h3>
+          <span class="price">$9</span>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <div class="silde-image">
+          <span class="off-label">20%</span>
+          <img src="../../../assets/product/furniture.png" alt="slide" />
+          <div class="favourite marked"><ion-icon name="heart"></ion-icon></div>
+        </div>
+        <div class="product-content">
+          <span class="product-provider">Mango</span>
+          <h3>T-Shirt SPANISH</h3>
+          <span class="sale">$210</span><span class="new-price">$140</span>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <div class="silde-image">
+          <img src="../../../assets/product/t-shirt.png" alt="slide" />
+          <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
+        </div>
+        <div class="product-content">
+          <span class="product-provider">Mango</span>
+          <h3>T-Shirt SPANISH</h3>
+          <span class="price">$9</span>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <div class="silde-image">
+          <span class="off-label">20%</span>
+          <img src="../../../assets/product/furniture.png" alt="slide" />
+          <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
+        </div>
+        <div class="product-content">
+          <span class="product-provider">Mango</span>
+          <h3>T-Shirt SPANISH</h3>
+          <span class="sale">$210</span><span class="new-price">$140</span>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="box-combo">
+    <div class="bestselling">
+      <ion-grid>
+        <ion-row>
+          <h1 class="title">Bestselling</h1>
+          <ion-item>
+            <ion-label>Mobile</ion-label>
+            <ion-select value="notifications" interface="action-sheet">
+              <ion-select-option value="fashion">Fashion</ion-select-option>
+              <ion-select-option value="mobile">Mobile</ion-select-option>
+              <ion-select-option value="electronics">Electronics</ion-select-option>
+              <ion-select-option value="appliences">Appliences</ion-select-option>
+              <ion-select-option value="home">Home</ion-select-option>
+              <ion-select-option value="beauty">Beauty</ion-select-option>
+              <ion-select-option value="sports">Sports</ion-select-option>
+              <ion-select-option value="furniture">Furniture</ion-select-option>
+              <ion-select-option value="toys">Toys</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row style="margin-top: 10px;">
+          <ion-col class="border-right">
+            <img src="../../assets/home-content/samsung.jpg" />
+            <span>Samsung Galaxy M21</span>
+          </ion-col>
+          <ion-col class="border-right">
+            <img src="../../assets/home-content/one-plus.jpg" />
+            <span>OnePlus Nord 5G</span>
+          </ion-col>
+          <ion-col class="border-bottom">
+            <img src="../../assets/home-content/redmi.jpg" />
+            <span>Redmi Note 9 Pro</span>
+          </ion-col>
+        </ion-row>
+        <ion-row style="border-top: 1px solid #ccc;margin-bottom: 10px;">
+          <ion-col class="border-right">
+            <img src="../../assets/home-content/infinix.jpg" />
+            <span>Infinix Note 7</span>
+          </ion-col>
+          <ion-col class="border-right">
+            <img src="../../assets/home-content/realme.jpg" />
+            <span>Realme Narzo 10</span>
+          </ion-col>
+          <ion-col>
+            <img src="../../assets/home-content/poco.jpg" />
+            <span>POCO M2</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <ion-grid class="recent-view">
+      <ion-row>
+        <ion-col>
+          <h2 class="title">Recently viewed</h2><ion-router-link href="tabs/tab2" class="underline">Underline</ion-router-link>
+        </ion-col>
+      </ion-row>
+      <ion-slides class="product-slider" [options]="productOptions" #slider>
+        <ion-slide>
+          <div class="slide">
+            <div class="silde-image">
+              <img src="../../../assets/product/t-shirt.png" alt="slide" />
+              <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
+            </div>
+            <div class="product-content">
+              <span class="product-provider">Mango</span>
+              <h3>T-Shirt SPANISH</h3>
+              <span class="price">$9</span>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="slide">
+            <div class="silde-image">
+              <span class="off-label">20%</span>
+              <img src="../../../assets/product/furniture.png" alt="slide" />
+              <div class="favourite marked"><ion-icon name="heart"></ion-icon></div>
+            </div>
+            <div class="product-content">
+              <span class="product-provider">Mango</span>
+              <h3>T-Shirt SPANISH</h3>
+              <span class="sale">$210</span><span class="new-price">$140</span>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="slide">
+            <div class="silde-image">
+              <img src="../../../assets/product/t-shirt.png" alt="slide" />
+              <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
+            </div>
+            <div class="product-content">
+              <span class="product-provider">Mango</span>
+              <h3>T-Shirt SPANISH</h3>
+              <span class="price">$9</span>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="slide">
+            <div class="silde-image">
+              <span class="off-label">20%</span>
+              <img src="../../../assets/product/furniture.png" alt="slide" />
+              <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
+            </div>
+            <div class="product-content">
+              <h3>Washing Machine</h3>
+              <span class="price">$200</span><span class="rating">4<ion-icon name="star"></ion-icon></span>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-grid>
+  </div>
+</ion-content>
