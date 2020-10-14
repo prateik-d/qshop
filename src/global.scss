@@ -40,3 +40,14 @@ ion-toolbar{height: 50px;}
 .off-label{background: #DB3022;position: absolute;border-radius: 50px;color: #fff;padding: 4px 8px;font-size: 11px;left: 10px;top: 10px;}
 .sale{color:#9B9B9B;text-decoration: line-through;margin-right: 5px;}
 .new-price{color:#DB3022;}
+
+/*header*/
+.logo{padding:6px;vertical-align: middle;}
+.header-search{padding: 15px 10px;float: right;}
+ion-toolbar{--border-width:0px !important;box-shadow:0 0 15px #ddd}
+ion-toolbar ion-router-link{vertical-align: middle;padding: 5px 0 5px 5px;color: #000;}
+ion-tab-bar{border: none;border-top-left-radius: 15px;box-shadow: 0 0 10px #ccc;border-top-right-radius: 15px;height: 55px;}
+ion-tab-bar ion-icon{font-size:25px;color: #9B9B9B;}
+
+/*filters*/
+.filters .item-native{padding: 0 !important;background: transparent !important;}

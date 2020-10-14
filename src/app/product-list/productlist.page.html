@@ -1,0 +1,111 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-router-link href="dashboard"><ion-icon name="chevron-back-outline"></ion-icon></ion-router-link>
+      <img src="../../assets/logo.png" class="logo" />
+      <ion-col></ion-col>
+      <ion-icon name="search-outline" class="header-search"></ion-icon>
+    </ion-row>
+    <ion-row class="filters">
+      <ion-col>
+        <ion-item>
+          <ion-label><ion-icon name="filter-outline"></ion-icon>Filters</ion-label>
+          <ion-select value="notifications" interface="action-sheet">
+            <ion-select-option value="popular">Popular</ion-select-option>
+            <ion-select-option value="newest">Newest</ion-select-option>
+            <ion-select-option value="review">Customer review</ion-select-option>
+            <ion-select-option value="low-price">Price: low to high</ion-select-option>
+            <ion-select-option value="high-price">Price: high to low</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-router-link href="/tabs/men"><ion-icon name="funnel-outline"></ion-icon>Price: lowest to high</ion-router-link>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="list-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <h2>Fashion</h2>
+  <ion-row>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/tops.png">
+        </div>
+        <span>Tops</span>
+      </ion-router-link>
+    </ion-col>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/shirts.png">
+        </div>
+        <span>Shirts & Blouses</span>
+      </ion-router-link>
+    </ion-col>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/jeans.png">
+        </div>
+        <span>Jeans</span>
+      </ion-router-link>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/pents.png">
+        </div>
+        <span>Pents</span>
+      </ion-router-link>
+    </ion-col>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/shorts.png">
+        </div>
+        <span>Shorts</span>
+      </ion-router-link>
+    </ion-col>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/skirts.png">
+        </div>
+        <span>Skirts</span>
+      </ion-router-link>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/kurta.png">
+        </div>
+        <span>Kurta</span>
+      </ion-router-link>
+    </ion-col>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/lengha.png">
+        </div>
+        <span>Lehnga</span>
+      </ion-router-link>
+    </ion-col>
+    <ion-col>
+      <ion-router-link href="/tabs/fashion">
+        <div class="category-box">
+          <img src="assets/product/dress.png">
+        </div>
+        <span>Dress</span>
+      </ion-router-link>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -12,8 +12,16 @@ const routes: Routes = [
         loadChildren: () => import('../dashboard/dashboard.module').then(m => m.dashboardPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'browse',
+        loadChildren: () => import('../browse/browse.module').then(m => m.browsePageModule)
+      },
+      {
+        path: 'fashion',
+        loadChildren: () => import('../fashion/fashion.module').then(m => m.fashionPageModule)
+      },
+      {
+        path: 'product-list',
+        loadChildren: () => import('../product-list/productlist.module').then(m => m.productlistPageModule)
       },
       {
         path: 'tab3',
