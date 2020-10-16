@@ -26,13 +26,23 @@
       </a>
     </div>
   </div>
+
+  <!-- slider -->
+
   <ion-slides [options]="slideOptions" pager="true" #slider autoplay="5000" (ionSlidesDidLoad)="slidesDidLoad(slider)">
-    <ion-slide>
+    
+    <ion-slide *ngFor="let slider of sliders">
+      <div class="slider">
+        <img [src]="serverUrl+slider.image_mobile" alt="slide" />
+      </div>
+    </ion-slide>
+    
+    <!--<ion-slide>
       <div class="slider">
         <img src="../../../assets/slider/slide1.png" alt="slide" />
       </div>
     </ion-slide>
-    <ion-slide>
+     <ion-slide>
       <div class="slider">
         <img src="../../../assets/slider/slide2.png" alt="slide" />
       </div>
@@ -41,15 +51,32 @@
       <div class="slider">
         <img src="../../../assets/slider/slide3.png" alt="slide" />
       </div>
-    </ion-slide>
+    </ion-slide> -->
   </ion-slides>
+
+  <!-- New Arrival -->
   <ion-grid>
     <ion-row>
       <h1 class="title" style="margin-left: 10px">New Arrival</h1>
     </ion-row>
   </ion-grid>
   <ion-slides class="product-slider" [options]="productOptions" #slider>
-    <ion-slide>
+    
+    <ion-slide  *ngFor="let latest_product of latest_products">
+      <div class="slide">
+        <div class="slide-image">
+          <img [src]="serverUrl+'/uploads/images/'+latest_product.image_small" alt="slide" />
+          <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
+        </div>
+        <div class="product-content">
+          <span class="product-provider">{{latest_product.title}}</span>
+          <h3>{{latest_product.users_shop_name}}</h3>
+          <span class="price">${{latest_product.price/100}}</span>
+        </div>
+      </div>
+    </ion-slide>
+
+    <!-- <ion-slide>
       <div class="slide">
         <div class="slide-image">
           <img src="../../../assets/product/t-shirt.png" alt="slide" />
@@ -102,7 +129,9 @@
           <span class="sale">$210</span><span class="new-price">$140</span>
         </div>
       </div>
-    </ion-slide>
+    </ion-slide> -->
+
+
   </ion-slides>
   <div class="box-combo">
     <div class="bestselling">
@@ -200,5 +229,29 @@
         </ion-slide>
       </ion-slides>
     </ion-grid> -->
+
+      <!-- New Arrival -->
+  <ion-grid>
+    <ion-row>
+      <h1 class="title" style="margin-left: 10px">Feature Categories</h1>
+    </ion-row>
+  </ion-grid>
+  <ion-slides class="product-slider" [options]="productOptions" #slider>
+    
+    <ion-slide  *ngFor="let featured_category of featured_categories">
+      <div class="slide">
+        <div class="slide-image">
+          <img [src]="serverUrl+featured_category.image" alt="slide" />
+          <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
+        </div>
+        <div class="product-content">
+          <span class="product-provider">{{featured_category.second_name}}</span>
+          <!-- <h3>{{featured_category.users_shop_name}}</h3>
+          <span class="price">${{featured_category.price/100}}</span> -->
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
   </div>
 </ion-content>
