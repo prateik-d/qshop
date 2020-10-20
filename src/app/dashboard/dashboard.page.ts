@@ -16,6 +16,7 @@ export class dashboardPage {
   sliders: any;
   blogs: any;
   featured_categories: any;
+  parent_categories: any;
   featured_products: any;
   latest_products: any;
 
@@ -51,9 +52,11 @@ export class dashboardPage {
             this.sliders = this.home_data.slider_items
             this.blogs = this.home_data.blogs
             this.featured_categories = this.home_data.featured_categories
+            this.parent_categories = this.home_data.parent_categories
             this.latest_products = this.home_data.latest_products
 
           console.log(this.home_data);
+          console.log(this.parent_categories);
           
           // this.featured_product =['a', 'b'];
           
