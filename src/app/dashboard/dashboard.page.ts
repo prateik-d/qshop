@@ -16,6 +16,7 @@ export class dashboardPage {
   sliders: any;
   blogs: any;
   featured_categories: any;
+  parent_categories: any;
   featured_products: any;
   latest_products: any;
 
