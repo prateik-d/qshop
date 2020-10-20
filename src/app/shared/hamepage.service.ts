@@ -25,6 +25,24 @@ export class HamepageService {
 
   }
 
+  get_cat_data()
+  {
+    return this.http.get<any>(this.serverUrl + 'api/homepage/category_data')
+    .pipe(
+      catchError(this.handleError)
+    );
+
+  }
+
+  get_subcat_data(id)
+  {
+    return this.http.get<any>(this.serverUrl + 'api/homepage/subcategory_data/' + id)
+    .pipe(
+      catchError(this.handleError)
+    );
+
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
