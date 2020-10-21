@@ -1,1 +1,11 @@
-
+ion-toolbar{height: initial;}
+.tab-active{border: 1px solid #000;border-radius: 5px;padding:7px 15px;color: #000;width: 90px;font-weight: 600;}
+.tabs{padding: 5px 5px 15px 5px;}
+.tabs ion-col{text-align: center;}
+.tabs ion-router-link{color:#000}
+ion-toolbar ion-router-link{align-self: center;}
+/*common*/
+h2{margin: 15px 10px;font-size: 18px;}
+.category-box{width: 90px;height: 90px;box-shadow: 0 0 10px #ddd;border-radius: 5px;display: flex;flex-direction: row;margin:0 auto;overflow: hidden;}
+ion-col span{margin: 7px auto 15px auto;display: table;font-size: 15px;color: #000;text-align: center;}
+.category-box img{object-fit: cover;height: 90px;width: 90px;}
